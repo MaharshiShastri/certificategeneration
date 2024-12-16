@@ -1,0 +1,2 @@
+step 1)npm install -g concurrently
+step 2) concurrently "npm run server --prefix server" "npm start --prefix client"
