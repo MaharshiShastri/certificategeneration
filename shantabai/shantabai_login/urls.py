@@ -1,5 +1,5 @@
 """
-URL configuration for shantabai_login project.
+URL configuration for ShantaBaiWeb project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.1/topics/http/urls/
@@ -16,8 +16,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import render
+
+def homepage(request):
+    return render(request, 'homepage.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('accounts/', include('accounts.urls')),
+    path('', homepage, name='homepage'),
+    path('maids/', include(('maids.urls', 'maids'), namespace='maids')),
+    path('customer/', include('customer.urls')),
 ]
