@@ -135,7 +135,8 @@ int main() {
 
     file.close();
     cv::destroyAllWindows();
-    std::cout << "All certificates have been generated!" << std::endl;
+    MessageBox(NULL, "All certificates have been generated!".c_str(), "Output Generated", MB_OK);
+    std::cout <<  << std::endl;
     return 0;
 }
 
