@@ -1,0 +1,6 @@
+opencv-python-headless
+pandas
+PyQt5
+numpy
+qdarkstyle
+concurrent.futures
