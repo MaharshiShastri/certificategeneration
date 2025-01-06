@@ -112,7 +112,7 @@ int main() {
     // Process CSV file
     std::string line;
     std::vector<std::thread> threads;
-    std::string outputPath = "D:\\example"; // Output directory
+    std::string outputPath = openFileDialog("Select output directory"); // Output directory
     while (std::getline(file, line)) {
         std::istringstream ss(line);
         std::string token;
